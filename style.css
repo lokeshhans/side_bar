@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+ position: relative;
+ background: url("https://images.unsplash.com/photo-1611594150014-1d390f1eb263?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+ background-size: cover;
+ height: 100vh;
+ width: 100%;
+
+}
+.container .side-bar-menu {
+    /* background-color: red ; */
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+}
+.side-bar-menu .logo {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 6px rgba(255,255,255,0.5) ;
+}
+.side-bar-menu .logo a{
+   color: #fff;
+   font-size: 25px;
+   font-weight: 500;
+   position: absolute;
+   left: 50px;
+   line-height: 60px;
+   text-decoration: none;
+
+}
+
+.side-bar-menu .menu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.side-bar-menu .menu li {
+    margin-top: 6px;
+    padding: 14px 20px ;
+}
+
+.side-bar-menu .menu  i{
+ color : #fff;
+ font-size: 20px;
+ padding-right: 8px;
+     
+}
+.side-bar-menu .menu  a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.side-bar-menu .menu li:hover{
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255,255,255,0.5) ;
+    transition: all 0.2s linear;
+
+}
+
+.side-bar-menu .social-media{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.6;
+}
+.social-media i{
+    margin: 5px 3px;
+    transition: all 0.2s linear;
+    
+}
+
+.social-media a:hover{
+    opacity: 1;
+}
+#check{
+    display: none;
+}
+.container .btn-one  i {
+    position: absolute; 
+    font-size: 20px;
+    color: #fff;
+    opacity: 1;
+    font-weight: 700;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.side-bar-menu .btn-two i{
+    opacity: 1;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3 linear;
+}
+.btn-one i:hover{
+    font-size: 9px;
+
+}
+.btn-two  i:hover{
+    font-size: 20px;
+
+}
+
+#check:checked ~.side-bar-menu{
+    left: 0px;
+}
+#check:checked ~.btn-one i{
+    opacity: 0;
+}
+#check:checked ~.btn-two i{
+    opacity: 1;
+}
